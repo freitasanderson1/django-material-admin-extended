@@ -1,6 +1,6 @@
 from django.urls import path
 
-from material.admin.sites import site
+from materialdash.admin.sites import site
 
 
 urlpatterns = [

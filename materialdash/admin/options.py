@@ -2,7 +2,7 @@ from django.conf import settings
 from django.db import models
 from django.forms import SplitDateTimeField, forms
 
-from material.admin import widgets
+from materialdash.admin import widgets
 
 FORMFIELD_FOR_DBFIELD_MATERIAL = {
     models.DateField: {'widget': widgets.MaterialAdminDateWidget},

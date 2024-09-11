@@ -5,9 +5,9 @@ from django.utils.module_loading import import_string
 from django.apps import apps
 from django.utils.text import capfirst
 
-from material.admin.options import MaterialModelAdminMixin
-from material.admin.settings import MATERIAL_ADMIN_SITE
-from material.admin.views import ThemesView
+from materialdash.admin.options import MaterialModelAdminMixin
+from materialdash.admin.settings import MATERIAL_ADMIN_SITE
+from materialdash.admin.views import ThemesView
 
 
 class MaterialAdminSite(AdminSite):

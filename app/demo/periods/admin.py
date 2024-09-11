@@ -5,7 +5,7 @@ from django import forms
 from demo.periods.models import DateTimeModel, TimeModel, DateModel, Period1, Period2, Period3, Period4, Period5
 from adminsortable2.admin import SortableAdminMixin
 
-from material.admin.widgets import MaterialAdminTimeWidget, MaterialAdminDateWidget
+from materialdash.admin.widgets import MaterialAdminTimeWidget, MaterialAdminDateWidget
 
 
 class DateForm(forms.ModelForm):
