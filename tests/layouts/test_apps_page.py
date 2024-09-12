@@ -20,14 +20,14 @@ class AppsLayoutsTest(TestCase):
         client.force_login(user)
         response = client.get(reverse_lazy('admin:index'))
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.template_name, 'material/admin/index.html')
+        self.assertEqual(response.template_name, 'materialdash/admin/index.html')
         self.assertNotIn('class="side-bar"', response._container[0].decode('utf-8'))
         self.assertNotIn('id="login-form"', response._container[0].decode('utf-8'))
         self.assertNotIn('id="username-input"', response._container[0].decode('utf-8'))
         self.assertNotIn('id="password-input"', response._container[0].decode('utf-8'))
         self.assertNotIn('class="submit-row-btn"', response._container[0].decode('utf-8'))
         self.assertIn('id="container"', response._container[0].decode('utf-8'))
-        if settings.MATERIAL_ADMIN_SITE['TRAY_REVERSE'] is True:
+        if settings.MATERIALDASH_ADMIN_SITE['TRAY_REVERSE'] is True:
             self.assertIn('id="tray"', response._container[0].decode('utf-8'))
         else:
             self.assertNotIn('id="tray"', response._container[0].decode('utf-8'))
@@ -50,14 +50,14 @@ class AppsLayoutsTest(TestCase):
         client.force_login(user)
         response = client.get(reverse_lazy('admin:index'))
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.template_name, 'material/admin/index.html')
+        self.assertEqual(response.template_name, 'materialdash/admin/index.html')
         self.assertNotIn('class="side-bar"', response._container[0].decode('utf-8'))
         self.assertNotIn('id="login-form"', response._container[0].decode('utf-8'))
         self.assertNotIn('id="username-input"', response._container[0].decode('utf-8'))
         self.assertNotIn('id="password-input"', response._container[0].decode('utf-8'))
         self.assertNotIn('class="submit-row-btn"', response._container[0].decode('utf-8'))
         self.assertIn('id="container"', response._container[0].decode('utf-8'))
-        if settings.MATERIAL_ADMIN_SITE['TRAY_REVERSE'] is True:
+        if settings.MATERIALDASH_ADMIN_SITE['TRAY_REVERSE'] is True:
             self.assertIn('id="tray"', response._container[0].decode('utf-8'))
         else:
             self.assertNotIn('id="tray"', response._container[0].decode('utf-8'))

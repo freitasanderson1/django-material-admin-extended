@@ -1,1 +1,1 @@
-default_app_config = 'material.admin.apps.AdminConfig'
+default_app_config = 'materialdash.admin.apps.AdminConfig'

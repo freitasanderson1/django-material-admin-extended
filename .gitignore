@@ -10,7 +10,7 @@ node_modules/
 *.egg-info/
 staticfiles/
 media/
-package/material/
+package/materialdash/
 *.txt.py
 .env
 .DS_Store

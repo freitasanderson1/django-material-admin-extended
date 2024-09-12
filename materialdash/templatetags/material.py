@@ -11,7 +11,7 @@ from django.template.defaultfilters import stringfilter
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
 
-from materialdash.admin.settings import MATERIAL_ADMIN_SITE
+from materialdash.admin.settings import MATERIALDASH_ADMIN_SITE
 
 register = Library()
 
@@ -64,7 +64,7 @@ def cookie(context, cookie_name):
         return False
 
     def _is_cookie_reversed(setting, *cookies):
-        return MATERIAL_ADMIN_SITE[setting] and cookie_name in cookies
+        return MATERIALDASH_ADMIN_SITE[setting] and cookie_name in cookies
 
     request = context['request']
     try:

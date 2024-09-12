@@ -22,14 +22,14 @@ class ChangePasswordLayoutsTest(TestCase):
         client.force_login(user)
         response = client.get(reverse_lazy('admin:password_change'))
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.template_name[0], 'material/admin/password_change.html')
+        self.assertEqual(response.template_name[0], 'materialdash/admin/password_change.html')
         self.assertNotIn('class="side-bar"', response._container[0].decode('utf-8'))
         self.assertNotIn('id="login-form"', response._container[0].decode('utf-8'))
         self.assertNotIn('id="username-input"', response._container[0].decode('utf-8'))
         self.assertNotIn('id="password-input"', response._container[0].decode('utf-8'))
         self.assertNotIn('class="submit-row-btn"', response._container[0].decode('utf-8'))
         self.assertIn('id="container"', response._container[0].decode('utf-8'))
-        if settings.MATERIAL_ADMIN_SITE['TRAY_REVERSE'] is True:
+        if settings.MATERIALDASH_ADMIN_SITE['TRAY_REVERSE'] is True:
             self.assertIn('id="tray"', response._container[0].decode('utf-8'))
         else:
             self.assertNotIn('id="tray"', response._container[0].decode('utf-8'))
@@ -53,7 +53,7 @@ class ChangePasswordLayoutsTest(TestCase):
         client.force_login(user)
         response = client.post(reverse_lazy('admin:password_change'))
         self.assertEqual(response.status_code, 200)
-        self.assertEqual(response.template_name[0], 'material/admin/password_change.html')
+        self.assertEqual(response.template_name[0], 'materialdash/admin/password_change.html')
         self.assertIn(
             """<div class="toast rounded error-toast panning"> Please correct the errors below. </div>""",
             re.sub("\s\s+", " ", response._container[0].decode('utf-8'))

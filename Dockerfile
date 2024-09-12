@@ -1,5 +1,6 @@
-FROM python:3.8
-MAINTAINER Anton Maistrenko
+FROM python:3.12
+
+LABEL mantainer="freitas.dev@proton.me"
 
 ENV PYTHONUNBUFFERED 1
 
@@ -8,11 +9,11 @@ COPY ./requirements.txt /requirements.txt
 RUN pip install -r requirements.txt
 
 RUN mkdir /app
-RUN mkdir /app/material
+RUN mkdir /app/materialdash
 
 WORKDIR /app
 COPY ./app /app
-COPY ./material /app/material
+COPY ./materialdash /app/materialdash
 COPY ./docker /app/docker
 COPY ./tests /app/test
 

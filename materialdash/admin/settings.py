@@ -1,11 +1,11 @@
 from django.conf import settings
 try:
-    from django.contrib.staticfiles.templatetags.staticfiles import static as staticfiles  # Django2 support
+    from django.contrib.staticfiles.templatetags.staticfiles import static as staticfiles
 except ImportError:
     from django.templatetags.static import static as staticfiles
 
 try:
-    settings = settings.MATERIAL_ADMIN_SITE
+    settings = settings.MATERIALDASH_ADMIN_SITE
 except AttributeError:
     settings = {}
 
@@ -18,7 +18,7 @@ def _get_setting_static(setting_name):
     return settings.get(setting_name) and staticfiles(settings[setting_name])
 
 
-MATERIAL_ADMIN_SITE = {
+MATERIALDASH_ADMIN_SITE = {
     'HEADER':  _get_setting('HEADER'),
     'TITLE':  _get_setting('TITLE'),
     'FAVICON':  _get_setting_static('FAVICON'),
@@ -43,5 +43,5 @@ MATERIAL_ADMIN_SITE = {
     }
 }
 
-MATERIAL_ADMIN_SITE['APP_ICONS'].update(_get_setting('APP_ICONS') or {})
-MATERIAL_ADMIN_SITE['MODEL_ICONS'].update(_get_setting('MODEL_ICONS') or {})
+MATERIALDASH_ADMIN_SITE['APP_ICONS'].update(_get_setting('APP_ICONS') or {})
+MATERIALDASH_ADMIN_SITE['MODEL_ICONS'].update(_get_setting('MODEL_ICONS') or {})

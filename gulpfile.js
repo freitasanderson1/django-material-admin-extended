@@ -10,11 +10,11 @@ const path = require('path');
 const paths = {
   styles: {
     src: 'libs/sass/*.scss',
-    dest: 'material/static/material/admin/css/'
+    dest: 'materialdash/static/materialdash/admin/css/'
   },
   scripts: {
     src: 'libs/js/*.js',
-    dest: 'material/static/material/admin/js/'
+    dest: 'materialdash/static/materialdash/admin/js/'
   }
 };
 

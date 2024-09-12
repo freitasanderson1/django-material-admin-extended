@@ -2,7 +2,7 @@
 {% load static i18n %}
 
 {% block extrastyle %}
-    <link rel="stylesheet" type="text/css" href="{% static 'material/admin/css/index.min.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'materialdash/admin/css/index.min.css' %}">
     {{ block.super }}
 {% endblock %}
 
@@ -15,7 +15,7 @@
 {% endif %}
 
 {% block content %}
-    {% include 'material/admin/includes/app_content.html' %}
+    {% include 'materialdash/admin/includes/app_content.html' %}
 {% endblock %}
 
 {% block sidebar %}

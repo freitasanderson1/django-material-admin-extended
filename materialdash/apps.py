@@ -1,6 +1,4 @@
 from django.apps import AppConfig
 
-
-class MaterialConfig(AppConfig):
-    name = 'material'
-
+class MaterialDashConfig(AppConfig):
+    name = 'materialdash'

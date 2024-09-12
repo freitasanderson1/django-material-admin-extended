@@ -4,11 +4,11 @@ from django.core import checks
 from django.utils.translation import gettext_lazy as _
 
 
-class MaterialAdminConfig(AppConfig):
+class MaterialDashAdminConfig(AppConfig):
     """Simple AppConfig which does not do automatic discovery."""
 
     default_auto_field = 'django.db.models.AutoField'
-    default_site = 'material.admin.sites.MaterialAdminSite'
+    default_site = 'materialdash.admin.sites.MaterialDashAdminSite'
     name = 'django.contrib.admin'
     verbose_name = _("Administration")
 
@@ -17,7 +17,7 @@ class MaterialAdminConfig(AppConfig):
         checks.register(check_admin_app, checks.Tags.admin)
 
 
-class AdminConfig(MaterialAdminConfig):
+class AdminConfig(MaterialDashAdminConfig):
     """The default AppConfig for admin which does autodiscovery."""
 
     default = True

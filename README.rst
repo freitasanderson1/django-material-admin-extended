@@ -35,8 +35,8 @@ Quick start
 .. code-block:: python
 
     INSTALLED_APPS = (
-        'material',
-        'material.admin',
+        'materialdash',
+        'materialdash.admin',
 
         'django.contrib.auth',
         ...
@@ -120,7 +120,7 @@ https://material.io/resources/icons/?style=baseline
 
 .. code-block:: python
 
-    MATERIAL_ADMIN_SITE = {
+    MATERIALDASH_ADMIN_SITE = {
         'HEADER':  _('Your site header'),  # Admin site header
         'TITLE':  _('Your site title'),  # Admin site title
         'FAVICON':  'path/to/favicon',  # Admin site favicon (path to static should be specified)
@@ -175,4 +175,3 @@ Video instructions
 
 .. image:: https://raw.githubusercontent.com/MaistrenkoAnton/django-material-admin/master/app/demo/screens/material3.png
    :target: https://youtu.be/_ifWi-a1z6M
-

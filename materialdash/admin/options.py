@@ -4,21 +4,21 @@ from django.forms import SplitDateTimeField, forms
 
 from materialdash.admin import widgets
 
-FORMFIELD_FOR_DBFIELD_MATERIAL = {
-    models.DateField: {'widget': widgets.MaterialAdminDateWidget},
+FORMFIELD_FOR_DBFIELD_MATERIALDASH = {
+    models.DateField: {'widget': widgets.MaterialDashAdminDateWidget},
     models.DateTimeField: {
         'form_class': SplitDateTimeField,
-        'widget': widgets.MaterialAdminSplitDateTime
+        'widget': widgets.MaterialDashAdminSplitDateTime
     },
-    models.TimeField: {'widget': widgets.MaterialAdminTimeWidget},
-    models.TextField: {'widget': widgets.MaterialAdminTextareaWidget},
+    models.TimeField: {'widget': widgets.MaterialDashAdminTimeWidget},
+    models.TextField: {'widget': widgets.MaterialDashAdminTextareaWidget},
 }
 
 
-class MaterialModelAdminMixin:
+class MaterialDashModelAdminMixin:
     def __init__(self, model, admin_site):
         super().__init__(model, admin_site)
-        self.formfield_overrides.update(FORMFIELD_FOR_DBFIELD_MATERIAL)
+        self.formfield_overrides.update(FORMFIELD_FOR_DBFIELD_MATERIALDASH)
 
     @property
     def media(self):
@@ -33,6 +33,6 @@ class MaterialModelAdminMixin:
             'vendor/xregexp/xregexp%s.js' % extra,
         ]
         material_js = [
-            'material/admin/js/RelatedObjectLookups.min.js',
+            'materialdash/admin/js/RelatedObjectLookups.min.js',
         ]
         return super().media + forms.Media(js=['admin/js/%s' % url for url in js] + material_js)

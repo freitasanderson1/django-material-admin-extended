@@ -1,1 +1,1 @@
-default_app_config = 'material.apps.MaterialConfig'
+default_app_config = 'materialdash.apps.MaterialConfig'

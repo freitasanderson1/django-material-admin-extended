@@ -1,16 +1,15 @@
-from daterangefilter.filters import FutureDateRangeFilter
 from django.contrib.admin import ModelAdmin, register
 from django import forms
 
 from demo.periods.models import DateTimeModel, TimeModel, DateModel, Period1, Period2, Period3, Period4, Period5
 from adminsortable2.admin import SortableAdminMixin
 
-from materialdash.admin.widgets import MaterialAdminTimeWidget, MaterialAdminDateWidget
+from materialdash.admin.widgets import MaterialDashAdminTimeWidget, MaterialDashAdminDateWidget
 
 
 class DateForm(forms.ModelForm):
     date = forms.DateField(
-        widget=MaterialAdminDateWidget,
+        widget=MaterialDashAdminDateWidget,
     )
 
     class Meta:
@@ -25,7 +24,6 @@ class DateModelAdmin(SortableAdminMixin, ModelAdmin):
     list_display = ('id', 'my_order', 'date')
     # ordering = ('my_order', )
     list_editable = ['date', ]
-    list_filter = [('date', FutureDateRangeFilter)]
     search_fields = (
         'date',
     )
@@ -36,7 +34,7 @@ class DateModelAdmin(SortableAdminMixin, ModelAdmin):
 
 class TimeForm(forms.ModelForm):
     time = forms.TimeField(
-        widget=MaterialAdminTimeWidget,
+        widget=MaterialDashAdminTimeWidget,
     )
 
     class Meta:

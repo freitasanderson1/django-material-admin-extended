@@ -107,7 +107,7 @@ msgstr "Закрыть"
 #: templates/admin/additional_submit_line.html:41
 #: templates/admin/pagination.html:16 templates/admin/submit_line.html:21
 #: templates/admin/submit_line.html:73
-#: templates/material/admin/theme_change.html:39
+#: templates/materialdash/admin/theme_change.html:39
 msgid "Save"
 msgstr ""
 
@@ -119,11 +119,11 @@ msgid "Delete"
 msgstr ""
 
 #: templates/admin/additional_submit_line.html:52
-#: templates/admin/change_form.html:68 templates/material/admin/side_nav.html:5
+#: templates/admin/change_form.html:68 templates/materialdash/admin/side_nav.html:5
 msgid "Minimize"
 msgstr "Свернуть"
 
-#: templates/admin/base.html:61 templates/material/admin/index.html:12
+#: templates/admin/base.html:61 templates/materialdash/admin/index.html:12
 msgid "Home"
 msgstr ""
 
@@ -336,16 +336,16 @@ msgid "Sa"
 msgstr "Сб"
 
 #: templates/admin/change_form.html:27 templates/admin/change_list.html:30
-#: templates/material/admin/login.html:31
-#: templates/material/admin/password_change.html:16
-#: templates/material/admin/theme_change.html:21
+#: templates/materialdash/admin/login.html:31
+#: templates/materialdash/admin/password_change.html:16
+#: templates/materialdash/admin/theme_change.html:21
 msgid "Please correct the error below."
 msgstr ""
 
 #: templates/admin/change_form.html:27 templates/admin/change_list.html:30
-#: templates/material/admin/login.html:33
-#: templates/material/admin/password_change.html:18
-#: templates/material/admin/theme_change.html:23
+#: templates/materialdash/admin/login.html:33
+#: templates/materialdash/admin/password_change.html:18
+#: templates/materialdash/admin/theme_change.html:23
 msgid "Please correct the errors below."
 msgstr ""
 
@@ -542,91 +542,91 @@ msgstr ""
 msgid "Link"
 msgstr ""
 
-#: templates/material/admin/includes/app_content.html:40
-#: templates/material/admin/side_nav.html:55
+#: templates/materialdash/admin/includes/app_content.html:40
+#: templates/materialdash/admin/side_nav.html:55
 msgid "You don't have permission to view or edit anything."
 msgstr ""
 
-#: templates/material/admin/login.html:47
+#: templates/materialdash/admin/login.html:47
 #, python-format
 msgid ""
 "You are authenticated as %(username)s, but are not authorized to access this "
 "page. Would you like to login to a different account?"
 msgstr ""
 
-#: templates/material/admin/login.html:90
+#: templates/materialdash/admin/login.html:90
 msgid "Forgotten your password or username?"
 msgstr ""
 
-#: templates/material/admin/login.html:94
+#: templates/materialdash/admin/login.html:94
 #: templates/registration/password_reset_complete.html:27
 msgid "Log in"
 msgstr ""
 
-#: templates/material/admin/logout.html:26
+#: templates/materialdash/admin/logout.html:26
 msgid "Logged out"
 msgstr ""
 
-#: templates/material/admin/logout.html:27
+#: templates/materialdash/admin/logout.html:27
 msgid "Thanks for spending some quality time with the Web site today."
 msgstr ""
 
-#: templates/material/admin/logout.html:28
+#: templates/materialdash/admin/logout.html:28
 msgid "Log in again"
 msgstr ""
 
-#: templates/material/admin/password_change.html:24
+#: templates/materialdash/admin/password_change.html:24
 msgid ""
 "Please enter your old password, for security's sake, and then enter your new "
 "password twice so we can verify you typed it in correctly."
 msgstr ""
 
-#: templates/material/admin/password_change.html:26
+#: templates/materialdash/admin/password_change.html:26
 msgid "Old password"
 msgstr ""
 
-#: templates/material/admin/password_change.html:33
+#: templates/materialdash/admin/password_change.html:33
 msgid "New password"
 msgstr ""
 
-#: templates/material/admin/password_change.html:41
+#: templates/materialdash/admin/password_change.html:41
 msgid "New password confirmation"
 msgstr ""
 
-#: templates/material/admin/password_change.html:51
+#: templates/materialdash/admin/password_change.html:51
 #: templates/registration/password_reset_confirm.html:37
 msgid "Change my password"
 msgstr ""
 
-#: templates/material/admin/tray.html:4
+#: templates/materialdash/admin/tray.html:4
 msgid "Side Navigation"
 msgstr "Навигация"
 
-#: templates/material/admin/tray.html:8
+#: templates/materialdash/admin/tray.html:8
 msgid "Additional submit line"
 msgstr "Дополнительная строка отправки"
 
-#: templates/material/admin/tray.html:12
+#: templates/materialdash/admin/tray.html:12
 msgid "Object tools"
 msgstr "Инструменты"
 
-#: templates/material/admin/widgets/date.html:8
-#: templates/material/admin/widgets/split_datetime.html:5
+#: templates/materialdash/admin/widgets/date.html:8
+#: templates/materialdash/admin/widgets/split_datetime.html:5
 msgid "Calendar"
 msgstr "Кадендарь"
 
-#: templates/material/admin/widgets/date.html:9
-#: templates/material/admin/widgets/split_datetime.html:6
+#: templates/materialdash/admin/widgets/date.html:9
+#: templates/materialdash/admin/widgets/split_datetime.html:6
 msgid "Today"
 msgstr ""
 
-#: templates/material/admin/widgets/split_datetime.html:9
-#: templates/material/admin/widgets/time.html:7
+#: templates/materialdash/admin/widgets/split_datetime.html:9
+#: templates/materialdash/admin/widgets/time.html:7
 msgid "Time"
 msgstr ""
 
-#: templates/material/admin/widgets/split_datetime.html:10
-#: templates/material/admin/widgets/time.html:8
+#: templates/materialdash/admin/widgets/split_datetime.html:10
+#: templates/materialdash/admin/widgets/time.html:8
 msgid "Now"
 msgstr "Сейчас"
 

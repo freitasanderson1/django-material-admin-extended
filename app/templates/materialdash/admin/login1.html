@@ -1,4 +1,4 @@
-{% extends "material/admin/login.html" %}
+{% extends "materialdash/admin/login.html" %}
 {% load i18n static %}
 
 {% block side_nav %}
@@ -15,7 +15,7 @@
   </style>
 
   <div id="redirect-link">
-    <a class="btn-floating pulse" href="https://github.com/MaistrenkoAnton/django-material-admin" target="_blank">
+    <a class="btn-floating pulse" href="https://github.com/freitasanderson1/materialdash" target="_blank">
       <img width="40" height="40 " src="{% static 'img/mark-github.png' %}"
            alt="">
     </a>
@@ -28,11 +28,11 @@
     var img = $('#redirect-link img');
     var links = [{
       image: '{% static 'img/mark-github.png' %}',
-      url: 'https://github.com/MaistrenkoAnton/django-material-admin'
+      url: 'https://github.com/freitasanderson1/materialdash'
     },
     {
       image: '{% static 'img/pypi.jpg' %}',
-      url: 'https://pypi.org/project/django-material-admin/'
+      url: 'https://pypi.org/project/materialdash/'
     }]
     var calls = 0;
     var item = 0;
