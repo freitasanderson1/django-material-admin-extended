@@ -1,4 +1,6 @@
 from django.conf import settings
+
+
 try:
     from django.contrib.staticfiles.templatetags.staticfiles import static as staticfiles
 except ImportError:
@@ -17,7 +19,6 @@ def _get_setting(setting_name):
 def _get_setting_static(setting_name):
     return settings.get(setting_name) and staticfiles(settings[setting_name])
 
-
 MATERIALDASH_ADMIN_SITE = {
     'HEADER':  _get_setting('HEADER'),
     'TITLE':  _get_setting('TITLE'),
@@ -32,6 +33,7 @@ MATERIALDASH_ADMIN_SITE = {
     'TRAY_REVERSE':  _get_setting('TRAY_REVERSE'),
     'NAVBAR_REVERSE':  _get_setting('NAVBAR_REVERSE'),
     'SHOW_COUNTS':  _get_setting('SHOW_COUNTS'),
+    'DJANGO_VERSION': _get_setting('DJANGO_VERSION'),
     'APP_ICONS': {
         'auth': 'group',
         'sites': 'web'

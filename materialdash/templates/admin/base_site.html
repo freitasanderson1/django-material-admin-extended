@@ -11,6 +11,15 @@
             font-weight: 400;
             src: url('{% static 'materialdash/fonts/flUhRq6tzZclQEJ-Vdg-IuiaDsNc.woff2' %}') format('woff2');
         }
+        .btn-logout{
+            padding-top: 1rem !important;
+            padding-bottom: 1rem !important;
+        }
+        .btn-logout:hover{
+            background: var(--main-hover-color) !important;
+            color: #fff !important;
+            height: 100%;
+        }
     </style>
     <link rel="stylesheet" type="text/css" href="{% static 'materialdash/admin/css/base_site.min.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'materialdash/admin/css/autocomplete.min.css' %}">
@@ -80,10 +89,25 @@
             {% trans 'Change password' %}
         </a>
     {% endif %}
-    <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
-        {% csrf_token %}
-        <button type="submit" style="font-weight:700; border:0;">{% trans 'Log out' %}</button>
-    </form>
+
+    {% if django_version >= 5 %}
+        <form id="logout-form" method="post" action="{% url 'admin:logout' %}">
+            {% csrf_token %}
+            <button class="btn-logout" type="submit" style="font-weight:700; border:0;">
+                <a>
+                    <span>
+                        {% trans 'Log out' %}
+                    </span>
+                    <i class="material-icons" aria-hidden="true">exit_to_app</i>
+                </a>
+            </button>
+        </form>
+    {% else %}
+        <a href="{% url 'admin:logout' %}">
+            {% trans 'Log out' %}
+            <i class="material-icons" aria-hidden="true">exit_to_app</i>
+        </a>
+    {% endif %}
 {% endblock %}
 
 {% block side_nav %}

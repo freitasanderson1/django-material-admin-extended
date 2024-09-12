@@ -21,6 +21,7 @@ class MaterialDashAdminSite(AdminSite):
     logout_bg = None
     show_themes = False
     show_counts = False
+    django_version = None
 
     def register(self, model_or_iterable, admin_class=None, **options):
         if admin_class:
@@ -45,6 +46,7 @@ class MaterialDashAdminSite(AdminSite):
         self.logout_bg = self.logout_bg or MATERIALDASH_ADMIN_SITE['LOGOUT_BG']
         self.show_themes = self.show_themes or MATERIALDASH_ADMIN_SITE['SHOW_THEMES']
         self.show_counts = self.show_counts or MATERIALDASH_ADMIN_SITE['SHOW_COUNTS']
+        self.django_version = self.django_version or MATERIALDASH_ADMIN_SITE['DJANGO_VERSION']
 
     def get_urls(self):
         urls = super().get_urls()
@@ -73,6 +75,7 @@ class MaterialDashAdminSite(AdminSite):
         context['login_logo'] = self.login_logo
         context['logout_bg'] = self.logout_bg
         context['show_themes'] = self.show_themes
+        context['django_version'] = self.django_version
         return context
 
     def _build_app_dict(self, request, label=None):

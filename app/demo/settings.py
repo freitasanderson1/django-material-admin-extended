@@ -1,5 +1,9 @@
 import os
 from django.utils.translation import gettext_lazy as _
+import django
+
+def _django_version():
+    return int(django.get_version()[0])
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -32,6 +36,7 @@ MATERIALDASH_ADMIN_SITE = {
     'TRAY_REVERSE': True,
     'NAVBAR_REVERSE': True,
     'SHOW_COUNTS': False,
+    'DJANGO_VERSION': _django_version(),
     'APP_ICONS': {
         'invitations': 'send',
     },

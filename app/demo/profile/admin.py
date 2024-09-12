@@ -43,4 +43,3 @@ class MaterialUserPictureAdmin(UserAdmin):
         self.message_user(request, "Published WARNING.", messages.WARNING)
 
     make_published.short_description = "Mark selected stories as published"
-
