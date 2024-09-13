@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "materialdash"
-version = "0.0.1"
+version = "0.0.22"
 description = "MaterialDash é uma interface de administração moderna para Django, baseada em Material Design."
 authors = ["Anderson Freitas <freitas.dev@proton.me>"]
 readme = "README.md"
